@@ -1,8 +1,11 @@
 import Link from 'next/link'
+import { Footer, Navbar } from '../components'
 
 const IndexPage = () => (
-  <div title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js</h1>
+  <div className="bg-zinc-900 h-screen">
+    <Navbar />
+    <h1 className="text-white text-4xl text-center pt-4">Elden Bling</h1>
+    <Footer />
   </div>
 )
 
