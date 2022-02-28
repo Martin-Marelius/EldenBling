@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Navbar = () => {
     return (
-        <ul className='flex flex-row relative place-content-end gap-10 mr-20 pt-5'>
+        <ul className='flex flex-row relative place-content-end gap-10 mr-20 pt-5 bg-inherit'>
 
             <li className='font-bold font-mono px-4 text-lg text-white transform hover:scale-105 transition-all'>
                 <Link href="/">Home</Link>
