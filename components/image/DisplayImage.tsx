@@ -6,17 +6,21 @@ import ImageModal from "./ImageModal";
 const DisplayImage = (props) => {
 
     const [showModal, setShowModal] = useState(false);
+    const [url, setUrl] = useState(props.data.download_url);
+    const [width, setWidth] = useState(props.data.width);
+    const [height, setHeight] = useState(props.data.height);
 
     return (
-        <div className="">
-            <button type="button" onClick={() => setShowModal(!showModal)} >
-                <Image src={props.image} width="200" height="200" />
+        <>
+            <button className="-mt-[5px]" type="button" onClick={() => setShowModal(!showModal)} >
+                <Image src={url} width={(width / height) * 200} height="200" />
             </button>
 
+
             {showModal ? (
-                <ImageModal image={props.image} setShowModal={setShowModal} showModal={showModal}/>
+                <ImageModal image={url} width={width} height={height} author={props.data.author} setShowModal={setShowModal} showModal={showModal} />
             ) : null}
-        </div>
+        </>
     );
 
 }
